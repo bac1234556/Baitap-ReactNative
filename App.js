@@ -7,44 +7,33 @@ export default function App() {
       <StatusBar barStyle="dark-content" backgroundColor="#fff" />
       <View style={styles.container}>
         
-        {/* Hàng 1 và 2: Chia làm 2 cột (trái và phải) để đảm bảo canh lề chính xác */}
-        <View style={styles.grid}>
-          
-          {/* Cột trái */}
-          <View style={styles.column}>
-            {/* Khối 1 */}
-            <View style={[styles.box, styles.bgBlue]}>
-              <Text style={styles.textWhite}>1</Text>
-            </View>
-            
-            {/* Khối 3 và 4 (Nằm chung 1 hàng) */}
-            <View style={styles.row}>
-              <View style={[styles.box, styles.flex1, styles.bgYellow]}>
-                <Text style={styles.textBlack}>3</Text>
-              </View>
-              <View style={[styles.box, styles.flex1, styles.bgGreen]}>
-                <Text style={styles.textWhite}>4</Text>
-              </View>
-            </View>
-          </View>
-          
-          {/* Cột phải */}
-          <View style={styles.column}>
-            {/* Khối 2 */}
-            <View style={[styles.box, styles.bgRed]}>
-              <Text style={styles.textWhite}>2</Text>
-            </View>
-            
-            {/* Khối 5 */}
-            <View style={[styles.box, styles.bgPurple]}>
-              <Text style={styles.textWhite}>5</Text>
-            </View>
-          </View>
+        {/* Khối 1 */}
+        <View style={[styles.box, styles.bgBlue, { flex: 1 }]}>
+          <Text style={styles.textWhite}>1</Text>
+        </View>
 
+        {/* Khối 2 */}
+        <View style={[styles.box, styles.bgRed, { flex: 1 }]}>
+          <Text style={styles.textWhite}>2</Text>
+        </View>
+
+        {/* Khối 3, 4, 5 (Nằm chung 1 hàng) */}
+        <View style={[styles.row, { flex: 2.5 }]}>
+          <View style={[styles.box, styles.flex1, styles.bgYellow]}>
+            <Text style={styles.textBlack}>3</Text>
+          </View>
+          <View style={[styles.box, styles.flex1, styles.bgGreen]}>
+            <Text style={styles.textWhite}>4</Text>
+          </View>
+          <View style={[styles.box, styles.flex1, styles.bgPurple]}>
+            <Text style={styles.textWhite}>5</Text>
+          </View>
+          {/* Ô rỗng tàng hình bên cạnh ô 5 để nó không bị tràn viền */}
+          <View style={styles.flex1} />
         </View>
 
         {/* Khối 6 */}
-        <View style={[styles.box, styles.bgOrange, styles.box6]}>
+        <View style={[styles.box, styles.bgOrange, { flex: 1.5 }]}>
           <Text style={styles.textWhite}>6</Text>
         </View>
 
@@ -67,29 +56,18 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-  },
-  grid: {
-    flexDirection: 'row',
-    gap: 12, // Khoảng cách giữa cột trái và cột phải
-  },
-  column: {
-    flex: 1,
-    gap: 12, // Khoảng cách theo chiều dọc giữa các khối trong cùng 1 cột
+    gap: 12, // Khoảng cách dọc giữa các hàng
   },
   row: {
     flexDirection: 'row',
-    gap: 12, // Khoảng cách theo chiều ngang giữa khối 3 và 4
+    gap: 12, // Khoảng cách ngang giữa khối 3, 4, 5
   },
   box: {
-    height: 150, // Chiều cao cố định cho các khối
     justifyContent: 'center',
     alignItems: 'center',
   },
   flex1: {
     flex: 1,
-  },
-  box6: {
-    marginTop: 12, // Khoảng cách giữa khối 6 và phần grid phía trên
   },
   
   // Styles cho Text
@@ -105,18 +83,18 @@ const styles = StyleSheet.create({
   },
   
   // Mã màu tương ứng với thiết kế
-  bgBlue: { backgroundColor: '#2B78E4' },
-  bgRed: { backgroundColor: '#EA4335' },
-  bgYellow: { backgroundColor: '#FDD835' },
-  bgGreen: { backgroundColor: '#34A853' },
-  bgPurple: { backgroundColor: '#8E24AA' },
-  bgOrange: { backgroundColor: '#FB8C00' },
+  bgBlue: { backgroundColor: '#3B82F6' }, // Màu xanh lam
+  bgRed: { backgroundColor: '#EF4444' }, // Màu đỏ
+  bgYellow: { backgroundColor: '#FACC15' }, // Màu vàng
+  bgGreen: { backgroundColor: '#22C55E' }, // Màu xanh lá
+  bgPurple: { backgroundColor: '#8B5CF6' }, // Màu tím
+  bgOrange: { backgroundColor: '#F97316' }, // Màu cam
   
   // Footer
   footer: {
-    flex: 1,
     justifyContent: 'flex-end',
     alignItems: 'center',
+    paddingTop: 8,
     paddingBottom: 24,
   },
   footerText: {
