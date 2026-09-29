@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, SafeAreaView, StatusBar, Platform, TextInput, TouchableOpacity, Alert } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function App() {
   // Trạng thái điều hướng giữa 2 màn hình
@@ -15,7 +16,6 @@ export default function App() {
       Alert.alert('Lỗi', 'Vui lòng nhập đầy đủ Họ tên và Mã số sinh viên');
       return;
     }
-    // Chuyển sang Screen 2
     setCurrentScreen('Screen2');
   };
 
@@ -25,7 +25,8 @@ export default function App() {
       <SafeAreaView style={styles.safeArea}>
         <View style={styles.container}>
           <TouchableOpacity style={styles.backButton} onPress={() => setCurrentScreen('Home')}>
-            <Text style={styles.backButtonText}>{"< Quay lại"}</Text>
+            <Ionicons name="arrow-back" size={20} color="#333" />
+            <Text style={styles.backButtonText}>Quay lại</Text>
           </TouchableOpacity>
 
           <Text style={styles.title}>Thông tin sinh viên</Text>
@@ -134,7 +135,7 @@ const styles = StyleSheet.create({
   textBlack: {
     fontSize: 48,
     fontWeight: 'bold',
-    color: '#000000',
+    color: '#00000036',
   },
 
   // Màu sắc khối
@@ -154,7 +155,7 @@ const styles = StyleSheet.create({
   formTitle: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#777',
+    color: '#777777ff',
     marginBottom: 5,
   },
   input: {
@@ -181,6 +182,9 @@ const styles = StyleSheet.create({
 
   // Screen 2 Styles
   backButton: {
+    flexDirection: 'row', // Sắp xếp icon và chữ theo hàng ngang
+    alignItems: 'center', // Căn giữa icon và chữ
+    gap: 4, // Khoảng cách giữa icon và chữ
     backgroundColor: '#F4A460',
     alignSelf: 'flex-start',
     paddingVertical: 8,
