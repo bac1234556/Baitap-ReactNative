@@ -9,13 +9,21 @@ export default function App() {
   // Trạng thái lưu trữ dữ liệu người dùng nhập
   const [studentName, setStudentName] = useState('');
   const [studentId, setStudentId] = useState('');
+  const [errorMessage, setErrorMessage] = useState(''); // Biến lưu thông báo lỗi
 
   // Xử lý sự kiện khi bấm nút Đăng nhập
   const handleLogin = () => {
     if (!studentName.trim() || !studentId.trim()) {
-      Alert.alert('Lỗi', 'Vui lòng nhập đầy đủ Họ tên và Mã số sinh viên');
+      setErrorMessage('Vui lòng nhập đầy đủ Họ tên và Mã số sinh viên!');
       return;
     }
+    const studentIdRegex = /^B[A-Za-z]{2}(2[2-6])\d{3,4}$/;
+    if (!studentIdRegex.test(studentId.trim())) {
+      setErrorMessage('Mã số sinh viên không hợp lệ!');
+      return;
+    }
+
+    setErrorMessage(''); // Xoá cảnh báo nếu nhập đúng
     setCurrentScreen('Screen2');
   };
 
@@ -77,6 +85,9 @@ export default function App() {
         {/* Form Nhập Thông Tin */}
         <View style={styles.formContainer}>
           <Text style={styles.formTitle}>Nhập thông tin sinh viên</Text>
+
+          {/* Dòng chữ cảnh báo đỏ sẽ hiện ra nếu errorMessage có dữ liệu */}
+          {errorMessage ? <Text style={styles.errorText}>{errorMessage}</Text> : null}
 
           <TextInput
             style={styles.input}
@@ -156,6 +167,12 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     color: '#777777ff',
+    marginBottom: 5,
+  },
+  errorText: {
+    color: 'red',
+    fontSize: 14,
+    fontWeight: '500',
     marginBottom: 5,
   },
   input: {
