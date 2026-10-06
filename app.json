@@ -3,6 +3,10 @@
     "name": "MyApp",
     "slug": "MyApp",
     "version": "1.0.0",
+    "locales": {
+      "vi": "./locales/vi.json",
+      "en": "./locales/en.json"
+    },
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",

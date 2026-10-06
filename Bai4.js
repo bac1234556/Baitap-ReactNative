@@ -194,10 +194,22 @@ const HomeScreen = ({ navigation }) => {
         <Text style={styles.cardDetail}>{item.email}</Text>
       </View>
       <View style={styles.actionColumn}>
-        <TouchableOpacity onPress={() => handleDelete(item.id)} style={styles.deleteBtn}>
+        <TouchableOpacity 
+          onPress={(e) => {
+            if (e && e.stopPropagation) e.stopPropagation();
+            handleDelete(item.id);
+          }} 
+          style={styles.deleteBtn}
+        >
           <Text style={styles.deleteText}>{t('delete')}</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Form', { student: item })} style={styles.editListBtn}>
+        <TouchableOpacity 
+          onPress={(e) => {
+            if (e && e.stopPropagation) e.stopPropagation();
+            navigation.navigate('Form', { student: item });
+          }} 
+          style={styles.editListBtn}
+        >
           <Text style={styles.editListText}>{t('editStudent')}</Text>
         </TouchableOpacity>
       </View>
