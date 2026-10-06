@@ -193,9 +193,14 @@ const HomeScreen = ({ navigation }) => {
         <Text style={styles.cardDetail}>{t('studentCode')}: {item.studentCode}</Text>
         <Text style={styles.cardDetail}>{item.email}</Text>
       </View>
-      <TouchableOpacity onPress={() => handleDelete(item.id)} style={styles.deleteBtn}>
-        <Text style={styles.deleteText}>{t('delete')}</Text>
-      </TouchableOpacity>
+      <View style={styles.actionColumn}>
+        <TouchableOpacity onPress={() => handleDelete(item.id)} style={styles.deleteBtn}>
+          <Text style={styles.deleteText}>{t('delete')}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Form', { student: item })} style={styles.editListBtn}>
+          <Text style={styles.editListText}>{t('editStudent')}</Text>
+        </TouchableOpacity>
+      </View>
     </TouchableOpacity>
   );
 
@@ -503,13 +508,27 @@ const styles = StyleSheet.create({
   cardInfo: { flex: 1 },
   cardName: { fontSize: 18, fontWeight: '700', marginBottom: 4, color: '#2C3E50' },
   cardDetail: { fontSize: 14, color: '#7F8C8D', marginBottom: 2 },
+  actionColumn: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    gap: 8,
+  },
   deleteBtn: {
     backgroundColor: '#E74C3C',
     paddingVertical: 8,
     paddingHorizontal: 12,
     borderRadius: 8,
+    alignItems: 'center',
   },
   deleteText: { color: '#fff', fontWeight: 'bold', fontSize: 12 },
+  editListBtn: {
+    backgroundColor: '#3498DB',
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  editListText: { color: '#fff', fontWeight: 'bold', fontSize: 12 },
 
   // FAB
   fab: {
