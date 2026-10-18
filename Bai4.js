@@ -8,6 +8,7 @@ import { NavigationContainer, useFocusEffect } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as ImagePicker from 'expo-image-picker';
 import * as Localization from 'expo-localization';
+import { FontAwesome5 } from '@expo/vector-icons';
 import i18n from 'i18next';
 import { initReactI18next, useTranslation } from 'react-i18next';
 
@@ -194,20 +195,20 @@ const HomeScreen = ({ navigation }) => {
         <Text style={styles.cardDetail}>{item.email}</Text>
       </View>
       <View style={styles.actionColumn}>
-        <TouchableOpacity 
+        <TouchableOpacity
           onPress={(e) => {
             if (e && e.stopPropagation) e.stopPropagation();
             handleDelete(item.id);
-          }} 
+          }}
           style={styles.deleteBtn}
         >
-          <Text style={styles.deleteText}>{t('delete')}</Text>
+          <FontAwesome5 name="trash" size={16} color="white" />
         </TouchableOpacity>
-        <TouchableOpacity 
+        <TouchableOpacity
           onPress={(e) => {
             if (e && e.stopPropagation) e.stopPropagation();
             navigation.navigate('Form', { student: item });
-          }} 
+          }}
           style={styles.editListBtn}
         >
           <Text style={styles.editListText}>{t('editStudent')}</Text>
