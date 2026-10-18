@@ -2,7 +2,7 @@
 
 Kho bài tập & Ứng dụng thực hành lập trình di động với React Native & Expo SDK 52.
 
-Demo video / Tài liệu:
+Demo video bài 4:
 https://drive.google.com/file/d/1O4bLlrZZ4MXLWPMN3DQxtk3-ZnhuRvAD/view?usp=sharing
 
 ---
