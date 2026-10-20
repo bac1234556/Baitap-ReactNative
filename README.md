@@ -3,6 +3,7 @@
 - **Sinh viên thực hiện**: Lê Việt Bắc
 - **Mã số sinh viên (MSSV)**: `BIT240036`
 - **Công nghệ**: React Native (Expo SDK 52) / JavaScript / AsyncStorage + MockAPI.io
+- **Video demo**: [demo_BIT240036_FoodManager.mp4](./demo_BIT240036_FoodManager.mp4) | [Xem trên Google Drive](https://drive.google.com/file/d/1jHkb7DAx4vQHr7O7BwBx2dGoRHIG2Igb/view?usp=sharing)
 
 
 ---
