@@ -3,6 +3,7 @@
 - **Sinh viên thực hiện**: Lê Việt Bắc
 - **Mã số sinh viên (MSSV)**: `BIT240036`
 - **Công nghệ**: React Native (Expo SDK 52) / JavaScript / AsyncStorage + MockAPI.io
+- **Video demo**: <img width="911" height="420" alt="image" src="https://github.com/user-attachments/assets/e8ad51b6-11a2-45e4-848e-02bec66bbd7e" />
 
 ---
 
