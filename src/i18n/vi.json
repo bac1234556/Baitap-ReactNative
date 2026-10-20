@@ -1,0 +1,151 @@
+{
+  "appTitle": "Quản lý món ăn",
+  "studentInfo": "Sinh viên: Lê Việt Bắc • BIT240036",
+  "menuHubTitle": "Quản lý món ăn (Bài kiểm tra giữa kỳ)",
+  "menuHubSubtitle": "Ứng dụng Offline-First, tự động đồng bộ MockAPI & Đa bộ lọc",
+
+  "nav": {
+    "dishes": "Món ăn",
+    "categories": "Loại món ăn",
+    "addDish": "Thêm món ăn",
+    "editDish": "Chỉnh sửa món",
+    "dishDetail": "Chi tiết món ăn",
+    "categoryManager": "Quản lý danh mục"
+  },
+
+  "status": {
+    "online": "Trực tuyến",
+    "offline": "Mất mạng",
+    "simulatedOffline": "Giả lập Offline",
+    "syncing": "Đang đồng bộ...",
+    "allSynced": "Đã đồng bộ toàn bộ",
+    "pendingSync": "{{count}} mục chờ đồng bộ",
+    "syncNow": "Đồng bộ ngay",
+    "toggleSimulate": "Giả lập Mất mạng",
+    "available": "Đang bán",
+    "unavailable": "Ngừng bán",
+    "quick": "Nhanh (≤15p)",
+    "regular": "Tiêu chuẩn (>15p)",
+    "synced": "Đã đồng bộ",
+    "pending_create": "Chờ tạo",
+    "pending_update": "Chờ cập nhật",
+    "pending_delete": "Chờ xóa"
+  },
+
+  "dishList": {
+    "searchPlaceholder": "Tìm kiếm theo tên món ăn...",
+    "filterButton": "Bộ lọc",
+    "activeFilters": "Bộ lọc đang chọn",
+    "clearFilter": "Đặt lại",
+    "totalDishes": "{{count}} Món ăn",
+    "emptyTitle": "Không tìm thấy món ăn nào",
+    "emptyDesc": "Thử điều chỉnh lại bộ lọc tìm kiếm hoặc thêm một món ăn mới hấp dẫn.",
+    "addFirstDish": "Thêm món ăn mới",
+    "prepTime": "{{minutes}} phút",
+    "price": "{{price}} ₫",
+    "speedQuick": "Nhanh",
+    "speedRegular": "Tiêu chuẩn"
+  },
+
+  "filterModal": {
+    "title": "Tìm kiếm & Lọc nâng cao",
+    "category": "Danh mục loại món",
+    "allCategories": "Tất cả danh mục",
+    "availability": "Trạng thái kinh doanh",
+    "onlyAvailable": "Chỉ hiển thị món đang bán",
+    "priceRange": "Khoảng giá (VNĐ)",
+    "minPrice": "Giá thấp nhất",
+    "maxPrice": "Giá cao nhất",
+    "sortBy": "Sắp xếp theo",
+    "sortDefault": "Mặc định (Mới nhất)",
+    "sortPriceAsc": "Giá: Thấp đến Cao",
+    "sortPriceDesc": "Giá: Cao đến Thấp",
+    "sortTimeAsc": "Thời gian: Chế biến nhanh nhất",
+    "apply": "Áp dụng bộ lọc",
+    "reset": "Xóa bộ lọc"
+  },
+
+  "dishDetail": {
+    "category": "Loại món",
+    "price": "Đơn giá",
+    "prepTime": "Thời gian làm",
+    "status": "Trạng thái",
+    "syncStatus": "Trạng thái đồng bộ",
+    "description": "Mô tả chi tiết",
+    "noDescription": "Chưa có mô tả chi tiết cho món ăn này.",
+    "gallery": "Bộ sưu tập ảnh ({{count}} ảnh)",
+    "tapToThumbnail": "Chạm vào ảnh để chọn làm ảnh đại diện",
+    "currentThumbnail": "Ảnh đại diện",
+    "setAsThumbnail": "Đặt làm ảnh đại diện",
+    "edit": "Sửa món ăn",
+    "delete": "Xóa món",
+    "confirmDeleteTitle": "Xác nhận xóa món",
+    "confirmDeleteMsg": "Bạn có chắc chắn muốn xóa món '{{name}}'? Hành động này không thể hoàn tác."
+  },
+
+  "form": {
+    "createTitle": "Thêm món ăn mới",
+    "editTitle": "Chỉnh sửa món ăn",
+    "categoryLabel": "Loại món ăn *",
+    "selectCategory": "Chọn một danh mục...",
+    "nameLabel": "Tên món ăn *",
+    "namePlaceholder": "Ví dụ: Phở Bò Tái Nạm",
+    "priceLabel": "Giá bán (VNĐ) *",
+    "pricePlaceholder": "Ví dụ: 65000",
+    "prepTimeLabel": "Thời gian chế biến (phút) *",
+    "prepTimePlaceholder": "Ví dụ: 15",
+    "isAvailableLabel": "Đang phục vụ (Có sẵn)",
+    "isAvailableDesc": "Tắt nếu món tạm thời hết nguyên liệu",
+    "descLabel": "Mô tả món ăn",
+    "descPlaceholder": "Mô tả nguyên liệu, hương vị, cách chế biến...",
+    "imagesLabel": "Danh sách link ảnh (URL) *",
+    "imageUrlPlaceholder": "Dán đường dẫn ảnh (https://...)",
+    "addImage": "Thêm ảnh",
+    "presetSuggestions": "Gợi ý ảnh mẫu:",
+    "thumbnailNote": "★ Chỉ duy nhất 1 ảnh được chọn làm Thumbnail đại diện",
+    "removeImage": "Xóa",
+    "save": "Lưu món ăn",
+    "saving": "Đang lưu...",
+    "cancel": "Hủy bỏ"
+  },
+
+  "categories": {
+    "title": "Quản lý danh mục loại món",
+    "addNew": "Thêm loại món mới",
+    "nameLabel": "Tên danh mục *",
+    "namePlaceholder": "Ví dụ: Hải sản tươi sống",
+    "descLabel": "Mô tả danh mục",
+    "descPlaceholder": "Mô tả ngắn gọn nhóm món ăn này...",
+    "save": "Thêm danh mục",
+    "delete": "Xóa",
+    "confirmDeleteTitle": "Xác nhận xóa danh mục",
+    "confirmDeleteMsg": "Bạn có chắc chắn muốn xóa danh mục '{{name}}'?",
+    "cannotDeleteTitle": "Không thể xóa danh mục",
+    "cannotDeleteMsg": "Không thể xóa loại món đang có món ăn trực thuộc! Vui lòng chuyển hoặc xóa các món ăn thuộc danh mục này trước."
+  },
+
+  "validation": {
+    "valNameRequired": "Tên món ăn không được để trống.",
+    "valPricePositive": "Giá bán phải là số hợp lệ và lớn hơn 0.",
+    "valPrepTimePositive": "Thời gian chế biến phải là số phút lớn hơn 0.",
+    "valCategoryRequired": "Vui lòng chọn danh mục cho món ăn.",
+    "valDuplicateNameInCategory": "Tên món ăn đã tồn tại trong cùng danh mục này! Vui lòng đặt tên khác.",
+    "valImageRequired": "Vui lòng thêm ít nhất một link ảnh cho món ăn.",
+    "valMinPriceNegative": "Giá tối thiểu không được là số âm.",
+    "valMaxPriceNegative": "Giá tối đa không được là số âm.",
+    "valMinGreaterThanMax": "Giá tối thiểu không thể lớn hơn giá tối đa.",
+    "requireCategoryName": "Tên danh mục không được để trống."
+  },
+
+  "common": {
+    "yes": "Đồng ý xóa",
+    "no": "Hủy bỏ",
+    "ok": "Đã hiểu",
+    "success": "Thành công",
+    "error": "Lỗi",
+    "savedSuccess": "Đã lưu thành công!",
+    "deletedSuccess": "Đã xóa thành công!",
+    "resetSeed": "Đặt lại dữ liệu gốc",
+    "resetSeedConfirm": "Khôi phục toàn bộ danh mục và món ăn về trạng thái dữ liệu mẫu ban đầu?"
+  }
+}

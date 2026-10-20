@@ -1,0 +1,151 @@
+{
+  "appTitle": "Food Manager",
+  "studentInfo": "Student: Lê Việt Bắc • BIT240036",
+  "menuHubTitle": "Food Manager (Midterm Exam)",
+  "menuHubSubtitle": "Offline-First Food Management with Auto-Sync & Multi-filter",
+
+  "nav": {
+    "dishes": "Dishes",
+    "categories": "Categories",
+    "addDish": "Add Dish",
+    "editDish": "Edit Dish",
+    "dishDetail": "Dish Details",
+    "categoryManager": "Manage Categories"
+  },
+
+  "status": {
+    "online": "Online",
+    "offline": "Offline",
+    "simulatedOffline": "Simulated Offline",
+    "syncing": "Syncing with cloud...",
+    "allSynced": "All records synced",
+    "pendingSync": "{{count}} pending sync",
+    "syncNow": "Sync Now",
+    "toggleSimulate": "Simulate Offline",
+    "available": "Available",
+    "unavailable": "Unavailable",
+    "quick": "Quick (≤15m)",
+    "regular": "Regular (>15m)",
+    "synced": "Synced",
+    "pending_create": "Pending Create",
+    "pending_update": "Pending Update",
+    "pending_delete": "Pending Delete"
+  },
+
+  "dishList": {
+    "searchPlaceholder": "Search dish by name...",
+    "filterButton": "Filter",
+    "activeFilters": "Active Filters",
+    "clearFilter": "Reset",
+    "totalDishes": "{{count}} Dishes",
+    "emptyTitle": "No dishes found",
+    "emptyDesc": "Try adjusting your search criteria or add a new delicious dish.",
+    "addFirstDish": "Add New Dish",
+    "prepTime": "{{minutes}} mins",
+    "price": "{{price}} ₫",
+    "speedQuick": "Quick",
+    "speedRegular": "Regular"
+  },
+
+  "filterModal": {
+    "title": "Search & Multi-Filter",
+    "category": "Category",
+    "allCategories": "All Categories",
+    "availability": "Availability",
+    "onlyAvailable": "Only show available dishes",
+    "priceRange": "Price Range (VND)",
+    "minPrice": "Min Price",
+    "maxPrice": "Max Price",
+    "sortBy": "Sort By",
+    "sortDefault": "Default (Newest)",
+    "sortPriceAsc": "Price: Low to High",
+    "sortPriceDesc": "Price: High to Low",
+    "sortTimeAsc": "Prep Time: Fastest First",
+    "apply": "Apply Filters",
+    "reset": "Reset All"
+  },
+
+  "dishDetail": {
+    "category": "Category",
+    "price": "Price",
+    "prepTime": "Prep Time",
+    "status": "Business Status",
+    "syncStatus": "Sync Status",
+    "description": "Description",
+    "noDescription": "No description provided for this dish.",
+    "gallery": "Image Gallery ({{count}} photos)",
+    "tapToThumbnail": "Tap photo to set as thumbnail",
+    "currentThumbnail": "Thumbnail",
+    "setAsThumbnail": "Set as Thumbnail",
+    "edit": "Edit Dish",
+    "delete": "Delete Dish",
+    "confirmDeleteTitle": "Delete Dish",
+    "confirmDeleteMsg": "Are you sure you want to delete '{{name}}'? This action cannot be undone."
+  },
+
+  "form": {
+    "createTitle": "Create New Dish",
+    "editTitle": "Edit Dish",
+    "categoryLabel": "Dish Category *",
+    "selectCategory": "Select a category...",
+    "nameLabel": "Dish Name *",
+    "namePlaceholder": "e.g., Phở Bò Tái Nạm",
+    "priceLabel": "Price (VND) *",
+    "pricePlaceholder": "e.g., 65000",
+    "prepTimeLabel": "Preparation Time (minutes) *",
+    "prepTimePlaceholder": "e.g., 15",
+    "isAvailableLabel": "Available for Ordering",
+    "isAvailableDesc": "Disable if temporarily out of stock",
+    "descLabel": "Description",
+    "descPlaceholder": "Describe ingredients, flavor, cooking method...",
+    "imagesLabel": "Dish Images (URLs) *",
+    "imageUrlPlaceholder": "Paste image URL (https://...)",
+    "addImage": "Add Image",
+    "presetSuggestions": "Quick Presets:",
+    "thumbnailNote": "★ Select one photo as the main thumbnail",
+    "removeImage": "Remove",
+    "save": "Save Dish",
+    "saving": "Saving...",
+    "cancel": "Cancel"
+  },
+
+  "categories": {
+    "title": "Manage Categories",
+    "addNew": "New Category",
+    "nameLabel": "Category Name *",
+    "namePlaceholder": "e.g., Hải sản tươi sống",
+    "descLabel": "Description",
+    "descPlaceholder": "Describe this food category...",
+    "save": "Add Category",
+    "delete": "Delete",
+    "confirmDeleteTitle": "Delete Category",
+    "confirmDeleteMsg": "Are you sure you want to delete '{{name}}'?",
+    "cannotDeleteTitle": "Deletion Blocked",
+    "cannotDeleteMsg": "Cannot delete this category because there are dishes currently belonging to it. Please reassign or delete those dishes first."
+  },
+
+  "validation": {
+    "valNameRequired": "Dish name cannot be empty.",
+    "valPricePositive": "Price must be a valid number greater than 0.",
+    "valPrepTimePositive": "Preparation time must be greater than 0 minutes.",
+    "valCategoryRequired": "Please select a valid category.",
+    "valDuplicateNameInCategory": "A dish with this name already exists in the selected category.",
+    "valImageRequired": "Please add at least one image URL for the dish.",
+    "valMinPriceNegative": "Min price cannot be negative.",
+    "valMaxPriceNegative": "Max price cannot be negative.",
+    "valMinGreaterThanMax": "Min price cannot be greater than Max price.",
+    "requireCategoryName": "Category name cannot be empty."
+  },
+
+  "common": {
+    "yes": "Yes, Delete",
+    "no": "Cancel",
+    "ok": "OK",
+    "success": "Success",
+    "error": "Error",
+    "savedSuccess": "Saved successfully!",
+    "deletedSuccess": "Deleted successfully!",
+    "resetSeed": "Reset Default Data",
+    "resetSeedConfirm": "Reset all categories and dishes to initial seed data?"
+  }
+}
